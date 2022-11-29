@@ -7,7 +7,7 @@
 .conter {
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    background: linear-gradient(120deg, #00ff04, #1100ff);
     height: 100vh;
     overflow: hidden;
 }
@@ -35,7 +35,7 @@
     box-sizing: border-box;
 }
 
-.form-card .field {
+.card-body .field {
     position: relative;
     border-bottom: 2px solid #adadad;
     margin: 30px 0;
@@ -49,4 +49,46 @@
     border: none;
     background: none;
     outline: none;
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.field span::before {
+    content: 'nnnnnn';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.field input:focus~label,
+.field input:valid~label {
+    top: 5px;
+    color: #2691d9;
+}
+.btn-submit{
+width: 100%;
+height: 50px;
+border: 1px;
+background: #2691d9;
+border-radius: 25px;
+font-size: 18px;
+color: white;
+font-weight: 700;
+cursor: pointer;
+outline: none;
+}
+.btn-submit:hover{
+    background: #00ff04;
+    transition: 2s;
 }
